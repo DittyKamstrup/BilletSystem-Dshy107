@@ -8,19 +8,25 @@ namespace BilletSystemCL
 {
     public class MC : BaseBil
     {
-        public string Nummerplade { get; set; }
-        public DateTime Dato { get; set; }
-
-       
-
-        public override string Køretøj()
-        {
-            return "Motorcykel";
-        }
 
         public override int Pris()
         {
-            return 125;
+            
+
+            if (BroBizz)
+                return GrundPris * 95 / 100;
+
+            return GrundPris;
+        }
+
+        public override string Køretøj()
+        {
+            return "MC";
+        }
+
+        public MC() : base(125)
+        {
+
         }
     }
 

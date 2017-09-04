@@ -24,7 +24,7 @@ namespace BilletSystemCL.Tests
         {
             var mc = new MC();
             string køretøj = mc.Køretøj();
-            Assert.AreEqual("Motorcykel", køretøj); 
+            Assert.AreEqual("MC", køretøj); 
         }
     }
 }
