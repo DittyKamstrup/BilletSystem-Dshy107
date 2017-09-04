@@ -20,9 +20,13 @@ namespace BilletSystemCL
 
         private string nummerPlade;
 
+        public DateTime Dato { get; set; }
+
+        public bool BroBizz { get; set; }
+
         public abstract int Pris();
 
-        public abstract string Køretøj();
+        public abstract string KøretøjType();
 
        
     }
