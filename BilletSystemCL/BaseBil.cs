@@ -26,7 +26,7 @@ namespace BilletSystemCL
 
         public abstract int Pris();
 
-        public abstract string KøretøjType();
+        public abstract string Køretøj();
 
        
     }
