@@ -28,6 +28,13 @@ namespace BilletSystemCL
 
         public abstract string Køretøj();
 
+        protected int GrundPris { get; }
+
+        public BaseBil(int grundpris)
+        {
+            this.GrundPris = grundpris;
+        }
+
        
     }
 }

@@ -8,18 +8,31 @@ namespace BilletSystemCL
 {
     public class BIl : BaseBil
     {
-        public string Nummerplade { get; set; }
-        public DateTime Dato { get; set; }
+        private int v;
 
        
         public override int Pris()
         {
-            return 240;
+            int total = GrundPris;
+
+            if (base.Dato.DayOfWeek == DayOfWeek.Saturday || base.Dato.DayOfWeek == DayOfWeek.Sunday)
+                total = total * 80 / 100;
+
+            if (BroBizz)
+                return total * 95 / 100;
+
+            return total;
         }
 
         public override string Køretøj()
         {
             return "Bil";
         }
+
+        public BIl() : base(240)
+        {
+
+        }
+            
     }
 }
